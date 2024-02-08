@@ -1,15 +1,7 @@
+import { Routes, Route } from 'react-router-dom';
 import Home from './routes/home/home.component';
-import { Routes, Route, Outlet } from 'react-router-dom';
+import Navigation from './routes/navigation/navigation.component';
 
-
-const Navigation = () => {
-  return (
-    <div>
-      <div>Navigation Bar</div>
-      <Outlet />
-    </div>
-  )
-}
 
 const Shop = () => {
   return <h1>Shop</h1>;

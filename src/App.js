@@ -11,10 +11,8 @@ const App = () => {
   return (
     <Routes>
       <Route path='/' element={<Navigation />}>
-        {/* index is use to set page to the first page */}
-        {/* index={true} can be briefly write down to index */}
         <Route index element={<Home />} /> 
-        <Route path='shop' element={<Shop />} />
+        <Route path='shop/*' element={<Shop />} />
         <Route path='auth' element={<Authentication />} />
         <Route path='checkout' element={<Checkout />} />
       </Route>

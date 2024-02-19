@@ -8,9 +8,11 @@ const CategoryPreview = ({ title, products }) => {
   return (
     <div className='category-preview-container'>
       <h2>
-        <Link className='title' to={title}>
-          {title.toUpperCase()}
-        </Link>        
+        <span className='title'>
+          <Link className='shop-link' to={title}>
+            {title.toUpperCase()}
+          </Link>        
+        </span>
       </h2>
       <div className='preview'>
         { 

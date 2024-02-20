@@ -1,4 +1,8 @@
-import './directory-item.styles.scss';
+import {
+  DirectoryItemContianer,
+  Body,
+  BackgroundImage
+} from './directory-item.styles.jsx';
 
 import { useNavigate } from 'react-router-dom'; 
 
@@ -10,19 +14,16 @@ const DirectoryItem = ({ category }) => {
     const onNavigateHandler = () => navigate(route);
 
     return (
-        <div 
-          key={id} 
-          className="directory-item-container" 
+        <DirectoryItemContianer
+          key={id}  
           onClick={onNavigateHandler} 
         >
-        <div className="background-image" style = {{
-          backgroundImage: `url(${imageUrl})`
-        }}/>
-        <div className="directory-item-body-container">
-          <h2>{title.toUpperCase()}</h2>
+        <BackgroundImage imageUrl={imageUrl}/>
+        <Body>
+          <h2>{title}</h2>
           <p>Shop Now</p>
-        </div> 
-      </div>
+        </Body> 
+      </DirectoryItemContianer>
     );
 };
 

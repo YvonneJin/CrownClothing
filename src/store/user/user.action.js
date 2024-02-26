@@ -1,4 +1,4 @@
-import { USER_ACTION_TYPES } from "../../context/user.context";
+import { USER_ACTION_TYPES } from "./user.types";
 import { createAction } from "../../utils/reducer/reducer.utils"; 
 
 
